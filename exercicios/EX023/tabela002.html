@@ -12,19 +12,37 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+        caption {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-size: 1.3em;
+            padding: 5px;
+            background-color: rgba(128, 128, 128, 0.657);
         }
         td,th {
-           border: 1px solid black; 
+           border: 1px solid rgb(192, 190, 190); 
            padding: 10px;
            
            
         }
         thead, tfoot {
-            background-color: gray;
+            background-color: rgb(73, 73, 73);
              color: white;
+        }
+        /* nth_child(2n) causa o efeito zebrado  */
+        tbody > tr:nth-child(2n){
+            background-color: lightgrey;
         }
         td.num {
             text-align: right;
+        }
+        /* esta configuração faz o titulo da tabela fixa no topo mesmo rolando a tabela, obs: é necessario declarar posição relativa na tabela */
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: rgb(73, 73, 73);;
         }
         
     </style>
@@ -34,6 +52,7 @@
     <!-- 
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION  // é a legenda da tabela
            THEAD
               TR, TD, TH
             TBODY
@@ -42,9 +61,13 @@
                TR, TD, TH
      -->
         <table>
+                <caption>Populaçao das Unidades Federativas</caption>
             <thead>
-                <th>Estado</th>
-                <th>Populaçao</th>
+                <!-- scope diz repeito ao escopo do th -->
+                <tr>
+                    <th scope="col">Estado</th>
+                    <th scope="col" style="width: 50px;">Populaçao</th>
+                </tr>
             </thead>
             <tbody>
                 <tr>
