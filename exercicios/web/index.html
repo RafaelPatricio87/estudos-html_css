@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Modificando o html</title>
+</head>
+<body class="conteudo exercicio">
+
+    <script>
+
+     const corpo = document.querySelector('body')
+    //  cria uma varivel com o body dentro  
+      const div1 = document.createElement('div')
+    //   cria uma div e adiciona dentro de uma variavel
+      div1.classList.add('destaque') 
+    //   adiciona a classe 'destaque'na variavel com a div
+      div1.innerHTML = 'Primeira'
+    //  adiciona um valor para a variavel com a div dentro
+    corpo.appendChild(div1)
+    //  adiciona a variavel que contema div com o valor dentro do variavel que contem o body.
+
+      const div2 = document.createElement('div')
+    //   cria uma div e adiciona dentro de uma variavel
+      div2.classList.add("destaque")
+    //   adiciona a classe 'destaque'na variavel com a div
+      div2.innerHTML= 'Segundo'
+    // adiciona um valor para a variavel com a div dentro
+    corpo.appendChild(div2)
+    // adiciona o paragrafo dentro da div.
+
+
+      const p = document.createElement('p')
+    //   cria um paragrao e adiciona dentro de uma variavel
+      p.innerHTML = 'paragrafo'
+    //   adiciona um valor para esse paragrafo
+      const div3 = document.createElement('div')
+    //   cria uma div e adiciona dentro de uma variavel
+      div3.appendChild(p)
+    //   adiciona o paragrafo dentro da div.
+    corpo.appendChild(div3)
+    //   adiciona o paragrafo dentro da div.
+
+    const texto = document.createTextNode('antes')
+    // cria um texto e adiciona dentro da variavel 
+    div3.insertBefore(texto,div3.childNodes[0])
+    // adiciona o texto dentro da div na posicao 0.
+    </script>
+</body>
+</html>

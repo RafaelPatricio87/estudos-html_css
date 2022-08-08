@@ -1,0 +1,15 @@
+
+li {
+    margin: auto;
+    width: 100px;
+    font-weight: bolder;
+    border: solid 5px yellowgreen;
+    padding: 15px;
+    color:blue;
+    background-color: darkgray;
+    text-align: center;
+}
+.destaque {
+    color: yellow;
+    padding: 10px;
+}
